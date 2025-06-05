@@ -48,6 +48,11 @@
             // 
             this.numQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numQtd.Location = new System.Drawing.Point(65, 63);
+            this.numQtd.Maximum = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
             this.numQtd.Minimum = new decimal(new int[] {
             1,
             0,

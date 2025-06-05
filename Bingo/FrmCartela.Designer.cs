@@ -58,6 +58,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.lblVitoria = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl1_2
@@ -385,11 +386,23 @@
             this.label30.Text = "B";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblVitoria
+            // 
+            this.lblVitoria.AutoSize = true;
+            this.lblVitoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVitoria.Location = new System.Drawing.Point(137, 21);
+            this.lblVitoria.Name = "lblVitoria";
+            this.lblVitoria.Size = new System.Drawing.Size(58, 20);
+            this.lblVitoria.TabIndex = 30;
+            this.lblVitoria.Text = "Vitória!";
+            this.lblVitoria.Visible = false;
+            // 
             // FrmCartela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 450);
+            this.Controls.Add(this.lblVitoria);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label28);
@@ -423,6 +436,7 @@
             this.Name = "FrmCartela";
             this.Text = "FrmCartela";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -458,5 +472,6 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label lbl4_4;
         private System.Windows.Forms.Label lbl3_5;
+        private System.Windows.Forms.Label lblVitoria;
     }
 }

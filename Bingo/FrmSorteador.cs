@@ -57,5 +57,46 @@ namespace Bingo
 
             lblNumero.Text = num.ToString();
         }
+
+        public void NotificarVitoria(FrmCartela cartela)
+        {
+            foreach(FrmCartela c in cartelas)
+            {
+                if (c != cartela)
+                {
+                    c.Close();
+                }
+                btnProximo.Enabled = false;
+            }
+        }
+
+        private void btnHistorico_Click(object sender, EventArgs e)
+        {
+            FrmHistorico f = new FrmHistorico(sorteados);
+            f.ShowDialog();
+        }
+
+        private void FrmSorteador_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Deseja encerrar este jogo?", "Bingo", MessageBoxButtons.YesNo);
+
+            if (r == DialogResult.Yes)
+            {
+                foreach (FrmCartela cartela in cartelas)
+                {
+                    cartela.Close();
+                }
+                anterior.Show();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
