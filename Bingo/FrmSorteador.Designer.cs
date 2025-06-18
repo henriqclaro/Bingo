@@ -36,7 +36,9 @@
             // 
             // lblNumero
             // 
+            this.lblNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.ForeColor = System.Drawing.Color.White;
             this.lblNumero.Location = new System.Drawing.Point(12, 122);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(456, 117);
@@ -45,6 +47,8 @@
             // 
             // btnProximo
             // 
+            this.btnProximo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnProximo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnProximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProximo.Location = new System.Drawing.Point(30, 47);
             this.btnProximo.Name = "btnProximo";
@@ -56,6 +60,8 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(319, 262);
             this.btnCancelar.Name = "btnCancelar";
@@ -67,6 +73,8 @@
             // 
             // btnHistorico
             // 
+            this.btnHistorico.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnHistorico.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorico.Location = new System.Drawing.Point(30, 262);
             this.btnHistorico.Name = "btnHistorico";
@@ -80,6 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(480, 330);
             this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.btnCancelar);

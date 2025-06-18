@@ -19,12 +19,19 @@ namespace Bingo
         Label[][] posicoes;
 
         int sorteados;
+        bool[] sorteadosCartela;
 
         public FrmCartela(FrmSorteador sorteador, int id)
         {
             InitializeComponent();
             this.sorteador = sorteador;
             this.id = id;
+
+            sorteadosCartela = new bool[76];
+            for (int i = 0; i < sorteadosCartela.Length; i++)
+            {
+                sorteadosCartela[i] = false;
+            }
 
             numeros = new int[5][]
             {
@@ -43,21 +50,30 @@ namespace Bingo
                 new Label[5]{ lbl5_1, lbl5_2, lbl5_3, lbl5_4, lbl5_5 },
             };
 
-            sorteados = 0;
+            sorteados = 1;
 
             CriarCartela();
         }
 
         void CriarCartela()
         {
-            for(int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Random r = new Random();
-                for(int j = 0; j < 5; j++)
+                for (int j = 0; j < 5; j++)
                 {
-                    int num = r.Next(1, 16) + (i * 15);
-                    numeros[i][j] = num;
-                    posicoes[i][j].Text = num.ToString();
+                    if (i == 2 && j == 2)
+                        continue;
+
+                    int num = 0;
+                    do
+                    {
+                        num = r.Next(1, 16) + (i * 15);
+                        numeros[i][j] = num;
+                        posicoes[i][j].Text = num.ToString();
+                    } while (sorteadosCartela[num]);
+
+                    sorteadosCartela[num] = true;
                 }
             }
         }
@@ -79,7 +95,6 @@ namespace Bingo
                         lblVitoria.Visible = true;
                         sorteador.NotificarVitoria(this);
                     }
-
 
                 }
             }

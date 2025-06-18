@@ -34,6 +34,8 @@
             // lbxHistorico
             // 
             this.lbxHistorico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lbxHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
+            this.lbxHistorico.ForeColor = System.Drawing.Color.White;
             this.lbxHistorico.FormattingEnabled = true;
             this.lbxHistorico.Location = new System.Drawing.Point(13, 13);
             this.lbxHistorico.Name = "lbxHistorico";
@@ -44,6 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(356, 450);
             this.Controls.Add(this.lbxHistorico);
             this.Name = "FrmHistorico";
